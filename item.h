@@ -12,11 +12,8 @@ public:
   Item();
   //Getters & Setters
   char* getName();
-  Room* getRoom();
 private:
-  char name[50];
-  Room* currentRoom;
-  
+  char name[50];  
 };
 
 #endif

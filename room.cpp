@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstring>
+#include <vector>
 #include <map>
 #include "room.h"
 
@@ -14,6 +15,10 @@ char* Room::getName(){
 
 char* Room::getDescription(){
   return description;
+}
+
+vector<Item*>* getItems(){
+  return &item;	
 }
 
 map<char*, Room*>* Room::getExits(){

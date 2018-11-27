@@ -1,5 +1,5 @@
-#ifndef ITEM_H
-#define ITEM_H
+#ifndef ROOM_H
+#define ROOM_H
 
 #include <iostream>
 #include <cstring>
@@ -14,12 +14,13 @@ class Room{
   //Getters & Setters
   char* getName();
   char* getDescription();
+  vector<Item*>* getItems();
   map<char*, Room*>* getExits();
 
  private:
   char name[50];
   char description[50];
-  //vector<Item*> items;
+  vector<Item*> items;
   map<char*, Room*> exits;
 };
 
