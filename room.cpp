@@ -17,10 +17,10 @@ char* Room::getDescription(){
   return description;
 }
 
-vector<Item*>* getItems(){
-  return &item;	
+vector<Item*>* Room::getItems(){
+  return &items;	
 }
 
-map<char*, Room*>* Room::getExits(){
+map<const char*, Room*>* Room::getExits(){
   return &exits;
 }

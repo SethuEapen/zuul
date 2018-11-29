@@ -5,6 +5,7 @@
 #include <cstring>
 #include <vector>
 #include <map>
+#include "item.h"
 
 using namespace std;
 
@@ -15,13 +16,13 @@ class Room{
   char* getName();
   char* getDescription();
   vector<Item*>* getItems();
-  map<char*, Room*>* getExits();
+  map<const char*, Room*>* getExits();
 
  private:
-  char name[50];
-  char description[50];
+  char name[50] = "Default Name";
+  char description[50] = "Default Description";
   vector<Item*> items;
-  map<char*, Room*> exits;
+  map<const char*, Room*> exits;
 };
 
 #endif
