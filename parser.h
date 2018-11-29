@@ -10,9 +10,7 @@
 
 class Parser{
  public:
-  boolean prosessCommand(char* str);
- private:
-  void toLower(char* str);
+  bool processCommand(char*, Player*);
 };
 
 #endif

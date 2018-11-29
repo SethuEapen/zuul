@@ -3,20 +3,22 @@
 #include <vector>
 #include "room.h"
 #include "item.h"
+#include "player.h"
 
 using namespace std;
 
-Player::Player(){
+Player::Player(Room* startRoom){
+  currentRoom = startRoom;
 }
 
-char* Room::getName(){
+char* Player::getName(){
   return name;
 }
 
-Room* getCurrentRoom(){
+Room* Player::getCurrentRoom(){
   return currentRoom;	
 }
 
-vector<Item*>* getItems(){
-  return &item;	
+vector<Item*>* Player::getItems(){
+  return &items;	
 }

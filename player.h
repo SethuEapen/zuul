@@ -10,7 +10,7 @@ using namespace std;
 
 class Player{
  public:
-  Player();
+  Player(Room*);
   //Getters & Setters
   char* getName();
   Room* getCurrentRoom();

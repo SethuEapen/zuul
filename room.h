@@ -19,8 +19,8 @@ class Room{
   map<const char*, Room*>* getExits();
 
  private:
-  char name[50] = "Default Name";
-  char description[50] = "Default Description";
+  char name[50];
+  char description[50];
   vector<Item*> items;
   map<const char*, Room*> exits;
 };
