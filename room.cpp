@@ -72,6 +72,7 @@ void Room::printItems(){
   for(it = items.begin(); it != items.end(); ++it){
     cout << (*it)->getName();
   }
+  cout << endl;
 }
 
 

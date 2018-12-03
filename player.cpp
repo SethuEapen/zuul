@@ -43,6 +43,17 @@ Item* Player::takeItem(char* itemName){
   return 0;
 }
 
+bool Player::validItem(char* itemName){
+  vector<Item*>::iterator it;
+  for(it = items.begin(); it != items.end(); ++it){
+    if(strcmp((*it)->getName(), itemName) == 0){
+	  return true;
+    }
+  }
+  return false;
+}
+
+
 void Player::printInventory(){
   vector<Item*>::iterator it;
   for(it = items.begin(); it != items.end(); ++it){

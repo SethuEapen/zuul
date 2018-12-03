@@ -19,6 +19,7 @@ class Player{
   void addItem(Item*);
   Item* takeItem(char*);
   void printInventory();
+  bool validItem(char*);
 private:
   char name[50];
   vector<Item*> items;
