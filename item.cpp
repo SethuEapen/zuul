@@ -5,9 +5,10 @@
 
 using namespace std;
 
-Item::Item(){	
+Item::Item(char* setName){
+  name = setName;
 }
 
 char* Item::getName(){
-	return name;
+  return name;
 }

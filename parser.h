@@ -11,6 +11,8 @@
 class Parser{
  public:
   bool processCommand(char*, Player*);
+ private:
+  char* substr(char*, int, int);//the idea to make this came from andrew
 };
 
 #endif

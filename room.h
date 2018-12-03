@@ -8,6 +8,7 @@
 #include "item.h"
 
 using namespace std;
+class Item; //andrew did this and didnt get any errors
 
 class Room{
  public:
@@ -17,7 +18,11 @@ class Room{
   char* getDescription();
   vector<Item*>* getItems();
   map<const char*, Room*>* getExits();
-
+  bool isValidRoom(char*);
+  Room* getExitRoom(char*);
+  void getExitDirections();
+  void addItem(Item*);
+  Item* takeItem(char*);
  private:
   char name[50];
   char description[50];

@@ -9,11 +9,11 @@ using namespace std;
 
 class Item{
 public:
-  Item();
+  Item(char*);
   //Getters & Setters
   char* getName();
 private:
-  char name[50];  
+  char* name;  
 };
 
 #endif
