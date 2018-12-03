@@ -46,9 +46,16 @@ Room* Room::getExitRoom(char* room){
 }
 
 void Room::getExitDirections(){
+  int i = 0;
   map<const char*, Room*>::iterator it;
   for(it = this->exits.begin(); it != this->exits.end(); ++it){
-    cout << it->first << ", ";
+    if(i == 0){
+		cout << it->first;
+		i++;
+	}
+	else{
+		cout << ", " << it->first;
+	}
   }
   cout << endl;
 }
