@@ -30,13 +30,23 @@ bool Parser::processCommand(char* str, Player* player){
       cout << "That is not a valid direction" << endl;
     }
   }
-  else if(strncmp(str, "exits", 5) == 0){
+  else if(strncmp(str, "take ", 5) == 0){
+	char* ItemName = substr(str, 5, strlen(str) + 1);
+	if(player->getCurrentRoom()->validItem(ItemName)){
+		player->addItem(player->getCurrentRoom()->takeItem(ItemName));
+		cout << "You now have " << ItemName << endl;
+	}
+	else{
+		cout << "Not a valid item!" << endl;
+	}
+  }
+  else if(strcmp(str, "exits") == 0){
     player->getCurrentRoom()->getExitDirections();
   }
-  else if(strncmp(str, "inventory", 9) == 0){
+  else if(strcmp(str, "inventory") == 0){
     player->printInventory();
   }
-  else if(strncmp(str, "exit", 4) == 0){
+  else if(strcmp(str, "exit") == 0){
     return false;
   }
   return true;

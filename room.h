@@ -22,7 +22,9 @@ class Room{
   Room* getExitRoom(char*);
   void getExitDirections();
   void addItem(Item*);
+  bool validItem(char* itemName);
   Item* takeItem(char*);
+  void printItems();
  private:
   char name[50];
   char description[50];

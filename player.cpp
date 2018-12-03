@@ -35,7 +35,9 @@ Item* Player::takeItem(char* itemName){
   vector<Item*>::iterator it;
   for(it = items.begin(); it != items.end(); ++it){
     if(strcmp((*it)->getName(), itemName) == 0){
-      return (*it);
+      Item* i = (*it);
+	  it = items.erase(it);
+	  return (i);
     }
   }
   return 0;

@@ -25,7 +25,7 @@ int main()
   room2->getExits()->insert(pair<const char*, Room*>("west", room));
   Player* p = new Player(room);//creating player
   Item* item = new Item((char*)"New Item");
-  p->addItem(item);
+  room->addItem(item);
   while(running){//main run roop
     cin.get(str, 50);
     cin.clear();
