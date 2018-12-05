@@ -1,3 +1,4 @@
+//inports
 #ifndef PARSER_H
 #define PARSER_H
 
@@ -10,9 +11,9 @@
 
 class Parser{
  public:
-  bool processCommand(char*, Player*);
+  bool processCommand(char*, Player*);//prosesses the user inputed commands
  private:
-  char* substr(char*, int, int);//the idea to make this came from andrew
+  char* substr(char*, int, int);//the idea to make this came from andrew - returns substring of char
 };
 
 #endif

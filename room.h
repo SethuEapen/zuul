@@ -1,3 +1,4 @@
+//imports
 #ifndef ROOM_H
 #define ROOM_H
 
@@ -8,11 +9,11 @@
 #include "item.h"
 
 using namespace std;
-class Item; //andrew did this and didnt get any errors
+class Item; //andrew did this and didnt get any errors and it also fixed my issue
 
 class Room{
  public:
-  Room();
+  Room();//constructor
   //Getters & Setters
   char* getName();
   char* getDescription();
@@ -27,7 +28,7 @@ class Room{
   void printItems();
  private:
   char name[50];
-  char description[50];
+  char description[1000];
   vector<Item*> items;
   map<const char*, Room*> exits;
 };
